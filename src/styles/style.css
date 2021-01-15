@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --black: #000000;
+  --white: #fdfffc;
+  --green: #54e346;
+  --purple-primary: #52057b;
+  --purple-secondary: #892cdc;
+  --purple-third: #bc6ff1;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+/* .content {
+  flex: 1 0 auto;
+} */
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* .footer {
+  flex-shrink: 0;
+} */
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  padding: 16px 0;
+  background-color: var(--black);
+}
+
+.header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .menu .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .menu .logo a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.header .menu .logo img {
+  width: 35px;
+}
+
+.header .menu .nav a {
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.header .menu .nav a:hover {
+  color: var(var(--green));
+  border-bottom: 2px solid var(--green);
+}
+
+.header .menu .nav a:first-child {
+  border-bottom: 2px solid var(--green);
+}
+
+.header .menu .nav .download {
+  margin: 0.8rem;
+  font-weight: bold;
+  background-color: var(--green);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.header .menu .nav .download:hover {
+  color: var(--white);
+  background-color: #8cec83;
+  border-bottom: none;
+}
+
+/* HERO */
+
+.main {
+  margin-top: 61px;
+  background-color: var(--purple-primary);
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+}
+
+.hero .hero-part {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero .details {
+  color: var(--white);
+  padding-top: 4rem;
+}
+
+.hero .details h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.hero .details p {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.hero .details .form {
+  margin-top: 3rem;
+}
+
+.hero .details .form label {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 0.8rem;
+  display: block;
+}
+
+.hero .details .form input[type="email"] {
+  width: 350px;
+  font-weight: 500;
+  background-color: var(--white);
+  font-weight: 400;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  outline: 0px;
+  margin-bottom: 0.2rem;
+}
+
+.hero .details .form input[type="button"] {
+  font-weight: 500;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  outline: 0px;
+  cursor: pointer;
+}
+
+.hero .details .form input[type="button"]:hover {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+/* HERO BOOK */
+
+.hero .book {
+  position: relative;
+}
+
+.hero .book .book-cover {
+  filter: drop-shadow(4px 4px 10px var(--purple-primary));
+  z-index: 1;
+  max-height: 400px;
+  position: absolute;
+  top: 1.8rem;
+  left: 7rem;
+}
+
+/* AUTHOR */
+
+.about {
+  height: 70vh;
+  background-color: var(--white);
+  padding-bottom: 2rem;
+}
+
+.about .container {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .box {
+  width: 125px;
+  height: 125px;
+  border: 5px solid var(--purple-secondary);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .box:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.about .box:hover {
+  border: 5px solid var(--green);
+}
+
+.about .box i {
+  color: var(--purple-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.about .box h3 {
+  color: var(--purple-secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about .box p {
+  font-weight: 600;
+}
+
+.about .container .about-detail {
+  width: 70%;
+  margin-top: 2rem;
+  line-height: 125%;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .container .about-detail p {
+  margin-top: 0.8rem;
+  text-align: justify;
+}
+
+.about .container .about-detail .download {
+  padding: 1rem 1rem;
+  margin: 1.5rem 0;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--green);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+/* AUTHOR  */
+
+.author {
+  height: 60vh;
+  background-color: var(--purple-secondary);
+}
+
+.author .container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.author .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 0;
+  filter: grayscale(100%);
+}
+
+.author .author-about {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.author .author-about p {
+  color: var(--white);
+  font-weight: 500;
+  text-align: justify;
+  border-left: 4px solid var(--green);
+  padding-left: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 2rem;
+  height: 100px;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .copy {
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+}
+
+footer .copy p a {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
